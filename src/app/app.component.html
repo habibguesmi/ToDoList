@@ -1,0 +1,26 @@
+<div>
+  <h3 class="text-center">Création liste des tâches</h3>
+  <div>
+    <div id="table">
+        <input class="nameInput" name="newTodo" [(ngModel)]="newTodo">    
+      <button type="submit" (click)="add()" class="btValider">Ajouter</button>
+      <br><p>{{newTodo}}</p>
+      <table>
+        <tr class="teteTab">
+          <td class="text-center listeNom">Liste des tâches</td>         
+          <td class="text-center">Actions</td>
+        </tr>
+        <tr *ngFor="let todooList of todooLists; let id = index" class="rowTab">
+          <td contenteditable="true" (blur)="updateList(id, $event)" class="cursor" title="Modifier">
+           {{todooList}}    
+          </td>                      
+            <td>
+                <span>
+                  <button type="button" class="btSupprimer" (click)="remove(id)">Supprimer</button>
+                </span>
+              </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
