@@ -1,4 +1,4 @@
 # TodoListApp
 
 # Remarque : 
-Pour modifier une tache , cliquez sur le nom de cette tache.
+Pour modifier une tâche , cliquez sur le nom de cette tâche.
